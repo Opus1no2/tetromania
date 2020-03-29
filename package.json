@@ -5,6 +5,11 @@
   "main": "index.js",
   "author": "Opus1no2 <tillotson.travis@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "./node_modules/.bin/webpack",
+    "serve": "./node_modules/.bin/webpack-dev-server",
+    "deploy": "aws s3 sync dist/ s3://tetro-mania.com --acl=public-read-write"
+  },
   "devDependencies": {
     "css-loader": "^3.4.2",
     "favicons-webpack-plugin": "^3.0.1",
